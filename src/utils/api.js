@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const OPEN_WEATHER_MAP_URL = 'http://samples.openweathermap.org/data/2.5/weather?appid=1a56a7a6fd720ff134b999ed6e807984&units=imperial';
+const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=1a56a7a6fd720ff134b999ed6e807984&units=imperial';
 
 export default {
   getTemp (location) {

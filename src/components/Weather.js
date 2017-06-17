@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import WeatherForm from './weather-form.js';
 import WeatherMessage from './WeatherMessage.js';
 import api from '../utils/api.js';
@@ -15,14 +14,16 @@ class Weather extends Component {
     this.handleSearch.bind(this);
   }
   handleSearch = (location) => {
+    var that = this;
+
     api.getTemp(location).then(function (temp) {
-      this.setState({
+      that.setState({
         location: location,
         temp: temp
-      })
+      });
     }, function (errorMessage) {
       alert(errorMessage);
-    }.bind(this));
+    });
   }
   render () {
     var {temp, location} = this.state;
